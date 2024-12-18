@@ -1,0 +1,70 @@
+:root {
+  --text_color_main: #000000;
+  --text_color_secodary: #545454;
+  --background_color: #FAFAFF;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  border: 0;
+}
+
+ul, ol, menu {
+  padding: 0;
+  list-style: none;
+}
+
+html, body, main {
+  height: 100%;
+  background-color: var(--background_color);
+}
+
+html {
+  font-size: 1.2rem;
+}
+
+.header_iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.footer_iframe {
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+h2 {
+  text-align: center;
+  color: var(--text_color_main);
+}
+
+h3 {
+  text-align: center;
+  color: var(--text_color_main);
+}
+
+p {
+  color: var(--text_color_secodary);
+}
+
+.special_offers_galery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
