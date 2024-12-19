@@ -1,0 +1,207 @@
+:root{
+    --text_color_main: #000000;
+    --text_color_secodary: #545454;
+    --background_color: #FAFAFF;
+    --color-secondary: #545454;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+//*** Default parameters *** == Reset
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    border: 0;
+}
+
+ul, ol, menu {
+    padding: 0;
+    list-style: none;
+}
+
+html, body, main {
+    // height: 100%;
+    background-color: var(--background_color);
+}
+
+html {
+    font-size: var(--defauld-font-size,1rem);
+    font-family: system-ui;
+}
+
+h2{
+    text-align: center;
+    color: var(--text_color_main);
+    font-size: var(--h2-font-size, 4rem);
+}
+
+h3{
+    text-align: center;
+    color: var(--text_color_main);
+    font-size: var(--h3-font-size, 2rem);
+}
+
+p{
+    color: var(--text_color_secodary);
+}
+
+a{
+    color: var(--text_color_main);
+    text-decoration: none;
+    cursor: pointer;
+    &:hover{
+        color: var(--text_color_secodary);        
+    }
+}
+
+//*************************
+
+// Composition
+.stack > * + * {
+    margin-block-start: var(--stack-gutter, 3rem);
+}
+
+// Utilities
+.u-horisontal-menu{
+    display: flex;
+    justify-content: space-around;
+    gap: var(--min-menu-gap, 1rem);
+}
+
+.u-logofont{
+    font-family: 'Great Vibes', system-ui, cursive;
+    font-weight: 100;
+}
+
+.u-right-margin-1rem{
+    margin-right: 1rem;
+}
+.u-left-margin-1rem{
+    margin-left: 1rem;
+}
+
+.u-top-margin{
+    margin-top: var(--stack-gutter, 3rem);
+}
+
+.u-stick-to-the-left{
+    margin-right: auto;
+}
+
+.u-stick-to-the-right{
+    margin-left: auto;
+}
+
+.u-put-to-center{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.u-put-to-start{
+    align-self: flex-start;
+}
+
+.u-put-to-end{
+    align-self: flex-end;
+}
+
+.u-focus-text{
+    color: var(--text_color_main);
+    font-weight: 800;
+    font-size: 1.1rem;
+}
+
+.u-padding-8{
+    padding: 0.5rem;
+}
+
+.u-padding-4{
+    padding: 0.25rem;
+}
+
+.u-radius-4{
+    border-radius: 0.25rem;
+}
+
+.u-shadow{
+    box-shadow: 10px 10px 15px var(--shadow-color,grey);
+}
+
+.u-border{
+    border: 1px solid var(--color-secondary);
+}
+
+
+// Block
+.iframe{
+    width: 100%;
+    height: var(--iframe-height, 7rem);
+    // border: solid red;   
+}
+
+header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    flex: 0;
+}
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    flex: 0;
+}
+
+.special_offers_galery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: var(--min-cards-gap, 2rem);
+}
+
+.logo_image{
+    height: var(--logo-image-heigth,100px);
+    width: var(--logo-image-width,100px);
+}
+
+.logo_image_small{
+    height: var(--s-logo-image-heigth,50px);
+    width: var(--s-logo-image-width,50px);
+}
+
+.card{
+    width: var(--card-width, 13rem);
+    height: var(--card-height, 22rem);
+    display: flex;
+    flex-direction: column;
+    :first-child{
+        margin-bottom: 0.5rem;
+    }     
+    :last-child{
+        margin: auto auto 0 auto;        
+    }
+}
+
+.card_image{
+    width: 100%;
+    aspect-ratio: 1;
+
+}
+
+.search-input {
+    font-size: var(--defauld-font-size,1rem);
+}
+
+
+// Exceptions
+
+
+
+
