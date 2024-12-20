@@ -8,6 +8,8 @@
     --text_color_secodary: #545454;
     --background_color: #FAFAFF;
     --color-secondary: #545454;
+    --margin-color:#d5d8f6;
+    --shadow-color: #d5d8f6;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
@@ -27,14 +29,14 @@ ul, ol, menu {
     list-style: none;
 }
 
-html, body, main {
-    // height: 100%;
-    background-color: var(--background_color);
-}
-
-html {
+html{
+    background-color: var(--margin-color);
     font-size: var(--defauld-font-size,1rem);
     font-family: system-ui;
+}
+
+body, main {
+    background-color: var(--background_color);    
 }
 
 h2{
@@ -73,6 +75,7 @@ a{
 // Utilities
 .u-horisontal-menu{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     gap: var(--min-menu-gap, 1rem);
 }
@@ -133,6 +136,11 @@ a{
     border-radius: 0.25rem;
 }
 
+.u-radius-16{
+    border-radius: 1rem;
+    // border: solid red;
+}
+
 .u-shadow{
     box-shadow: 10px 10px 15px var(--shadow-color,grey);
 }
@@ -140,12 +148,19 @@ a{
 .u-border{
     border: 1px solid var(--color-secondary);
 }
+
+.u-card-body{
+    width: 97vw;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;  
+}
 // *** END OF UTILITIES ***
 
 // Block
 .iframe{
     width: 100%;
-    height: var(--iframe-height, 7rem);
+    height: var(--iframe-height, 6.5rem);
     // border: solid red;   
 }
 
@@ -155,6 +170,7 @@ header{
     justify-content: space-between;
     align-items: center;
     flex: 0;
+    background-color: var(--background_color);
 }
 
 footer{
@@ -163,6 +179,7 @@ footer{
     justify-content: space-between;
     align-items: center;
     flex: 0;
+    background-color: var(--background_color);
 }
 
 .special_offers_galery{
@@ -193,6 +210,10 @@ footer{
     :last-child{
         margin: auto auto 0 auto;        
     }
+
+    &:hover {
+        transform: scale(1.1);
+    }
 }
 
 .card_image{
@@ -204,6 +225,7 @@ footer{
 .search-input {
     font-size: var(--defauld-font-size,1rem);
 }
+
 // *** END OF BLOCK ***
 
 // Exceptions
