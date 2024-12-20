@@ -7,7 +7,8 @@
 }
 
 *, *::before, *::after {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 * {
@@ -55,12 +56,16 @@ a:hover {
 }
 
 .stack > * + * {
-  margin-block-start: var(--stack-gutter, 3rem);
+  -webkit-margin-before: var(--stack-gutter, 3rem);
+          margin-block-start: var(--stack-gutter, 3rem);
 }
 
 .u-horisontal-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   gap: var(--min-menu-gap, 1rem);
 }
 
@@ -92,15 +97,18 @@ a:hover {
 .u-put-to-center {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .u-put-to-start {
-  align-self: flex-start;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 .u-put-to-end {
-  align-self: flex-end;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 .u-focus-text {
@@ -122,7 +130,8 @@ a:hover {
 }
 
 .u-shadow {
-  box-shadow: 10px 10px 15px var(--shadow-color, grey);
+  -webkit-box-shadow: 10px 10px 15px var(--shadow-color, grey);
+          box-shadow: 10px 10px 15px var(--shadow-color, grey);
 }
 
 .u-border {
@@ -135,25 +144,47 @@ a:hover {
 }
 
 header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  flex: 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 0;
+      -ms-flex: 0;
+          flex: 0;
 }
 
 footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  flex: 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 0;
+      -ms-flex: 0;
+          flex: 0;
 }
 
 .special_offers_galery {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   gap: var(--min-cards-gap, 2rem);
 }
 
@@ -170,8 +201,13 @@ footer {
 .card {
   width: var(--card-width, 13rem);
   height: var(--card-height, 22rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .card :first-child {
   margin-bottom: 0.5rem;
