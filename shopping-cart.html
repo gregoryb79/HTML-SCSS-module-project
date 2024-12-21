@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/styles.css" />
+    <link rel="stylesheet" href="dist/cart-styles.css" />
+    <title>Shopping Cart</title>
+</head>
+<body>
+
+    <header> 
+        <iframe src="header.html" class="iframe" aria-label="Site Header"></iframe>       
+    </header>
+
+    <main class="cart-page">
+        <article class="info-card">
+            <h1>Cart</h1>
+            <ul class="shopping-cart">
+                <li class="shopping-item">
+                    <img src="pictures/0000673173_OG.JPG" alt="antique chair">
+                    <p>Antique Chair</p>
+                    <p>$100</p>
+                    <label for="quantity">quantity</label>
+                    <input type="number" id="quantity-item" min="1" value="1">
+                    <button class="delete-item ">delete 🗑️</button>
+                </li>
+                <li class="shopping-item">
+                    <img src="pictures/0000329639_OG.JPG" alt="Luxurious Chair">
+                    <p>Luxurious Chair</p>
+                    <p>$500</p>
+                    <label for="quantity">quantity</label>
+                    <input type="number" id="quantity-item" min="1" value="1">
+                    <button class="delete-item ">delete 🗑️</button>
+                </li>
+                <li class="shopping-item">
+                    <img src="pictures/0000369201_OG.JPG" alt="Console Table">
+                    <p>Console Table</p>
+                    <p>$1,000</p>
+                    <label for="quantity">quantity</label>
+                    <input type="number" id="quantity-item" min="1" value="1">
+                    <button class="delete-item ">delete 🗑️</button>
+                </li>
+                <li class="shopping-item">
+                    <img src="pictures/0000393718_OG.JPG" alt="Antique Vase">
+                    <p>Antique Vase</p>
+                    <p>$3,500</p>
+                    <label for="quantity">quantity</label>
+                    <input type="number" id="quantity-item" min="1" value="1">
+                    <button class="delete-item ">delete 🗑️</button>
+                </li>
+            </ul>
+        </article>
+
+        <article  class="info-card">
+            <h2>Your Order</h2>
+            <ul class="purchase-info">
+                <li class="info-item">
+                    <p>Delivery</p>
+                    <form class=delivery>
+                        <label>
+                          <input type="radio" name="option" value="option1">
+                           Pick-up: Free
+                        </label>
+                        <br>
+                        <label>
+                          <input type="radio" name="option" value="option2">
+                          Home-Delivery: $10
+                        </label>
+                      </form>
+                      
+                </li>
+                <li class="info-item">
+                    <form class="promocode">
+                        <label for="coupon-code"></label>
+                        <input type="text" id="coupon-code" name="coupon-code" placeholder="Promocode">
+                        <button type="submit">Apply</button>
+                      </form>
+                </li>
+                <li class="info-item">
+                    <p>Summary</p>
+                        <div class="pricing">
+                          <p class="pricing-name">Subtotal      $ 5,100</p>
+                          <p class="discount">Discount       $ 1,020</p>
+                          <p>delivery       $ 10</p>
+                          <p class="total-price">Total          $ 4,090</p>
+                        </div>
+                      </form>
+                </li>
+                <li class="info-item">
+
+                </li>
+            </ul>
+        </article>
+
+    </main>
+
+
+    <footer class="u-top-margin">
+        <iframe src="footer.html" class="iframe" aria-label="Site footer"></iframe>
+    </footer>
+
+</body>
+</html>
