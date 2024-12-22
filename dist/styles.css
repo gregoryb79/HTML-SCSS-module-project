@@ -133,8 +133,16 @@ a:hover {
   box-shadow: 10px 10px 15px var(--shadow-color, grey);
 }
 
+.u-shadow-small {
+  box-shadow: 5px 5px 10px grey;
+}
+
 .u-border {
   border: 1px solid var(--color-secondary);
+}
+
+.u-bg-color-margin {
+  background-color: var(--margin-color);
 }
 
 .u-card-body {
@@ -142,6 +150,22 @@ a:hover {
   margin: auto;
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+.u-24-font {
+  font-size: 1.5rem;
+}
+
+button {
+  cursor: pointer;
+}
+button:hover {
+  transform: scale(1.1);
+}
+
+.about-us {
+  width: min(60rem, 80vw);
+  margin: auto;
 }
 
 .iframe {
@@ -206,5 +230,22 @@ footer {
 }
 
 .search-input {
-  font-size: var(--defauld-font-size, 1rem);
+  font-size: var(--default-font-size, 1rem);
+}
+
+.input {
+  font-size: var(--default-font-size, 1rem);
+  width: min(60ch, 80vh);
+}
+
+.message-input {
+  font-size: var(--default-font-size, 1rem);
+  width: min(60ch, 80vh);
+}
+
+.contact-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--min-menu-gap, 1rem);
 }
