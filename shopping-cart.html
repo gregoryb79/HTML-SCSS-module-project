@@ -8,10 +8,45 @@
     <link rel="stylesheet" href="dist/cart-styles.css" />
     <title>Shopping Cart</title>
 </head>
+
 <body class="u-card-body u-radius-16">
 
-    <header class="u-radius-16"> 
-        <iframe src="header.html" class="iframe u-radius-16" aria-label="Site Header"></iframe>       
+    <header class="u-radius-16">
+            
+        <a href="index.html" aria-label="internal link to Home Page" target="_parent">
+            <img src="pictures/TT-logo.png" alt="Timeless Treasures Logo" class="logo_image u-left-margin-1rem">
+        </a>
+    
+        <menu class="u-horisontal-menu u-put-to-center u-put-to-start" aria-label="Site Navigation Menu">
+            <li>
+                <a href="index.html" aria-label="internal link to Home Page" target="_parent">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="products.html" aria-label="internal link to Products Page" target="_parent">
+                    Products
+                </a>
+            </li>
+            <li>
+                <a href="about-us.html" aria-label="internal link to About Us Page" target="_parent">
+                    About Us
+                </a>
+            </li>
+        </menu>
+        
+        <menu class="u-horisontal-menu u-right-margin-1rem" aria-label="Site Utilities Menu">
+            <li>
+                <input type="text" placeholder="Search..." class="search-input u-padding-8 u-radius-4" />           
+            </li>
+            <li>
+                <a href="shopping-cart.html" aria-label="Go to Shopping Cart" target="_parent">
+                    🛒
+                </a>
+            </li>
+            <li>☰</li>
+        </menu>  
+    
     </header>
 
     <main class="cart-page">
@@ -97,8 +132,49 @@
     </main>
 
 
-    <footer class="u-top-margin u-radius-16">
-        <iframe src="footer.html" class="iframe u-radius-16" aria-label="Site footer"></iframe>
+    <footer class="u-radius-16">
+
+        <a href="index.html" aria-label="internal link to Home Page" target="_parent">
+            <img src="pictures/TT-logo.png" alt="Timeless Treasures Logo" class="logo_image u-left-margin-1rem">
+        </a>
+        
+    
+        <menu class="u-horisontal-menu u-put-to-center u-put-to-end" aria-label="Site Navigation Menu">
+            <li>
+                <a href="index.html" aria-label="internal link to Home Page" target="_parent"> 
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="products.html" aria-label="internal link to Products Page" target="_parent">
+                    Products
+                </a>
+            </li>
+            <li>
+                <a href="about-us.html" aria-label="internal link to About Us Page" target="_parent">
+                    About Us
+                </a>
+            </li>
+        </menu>
+        
+        <menu class="u-horisontal-menu u-right-margin-1rem">
+            <li>
+                <a href="#" aria-label="external link to Facebook page">
+                    <img src="pictures/facebook-logo.avif" alt="Facebook Logo" class="logo_image_small">
+                </a>            
+            </li>
+            <li>
+                <a href="#" aria-label="external link to Instagram page">
+                    <img src="pictures/pngwing.com.png" alt="Instagram Logo" class="logo_image_small">
+                </a>           
+            </li>
+            <li>
+                <a href="#" aria-label="external link to WhatsApp page">
+                    <img src="pictures/whatsapp-xxl.png" alt="WhatsApp Logo" class="logo_image_small">
+                </a>            
+            </li>
+        </menu>   
+    
     </footer>
 
 </body>
