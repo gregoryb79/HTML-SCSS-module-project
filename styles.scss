@@ -8,6 +8,8 @@
     --text_color_secodary: #545454;
     --background_color: #FAFAFF;
     --color-secondary: #545454;
+    --margin-color:#d5d8f6;
+    --shadow-color: #d5d8f6;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
@@ -27,14 +29,14 @@ ul, ol, menu {
     list-style: none;
 }
 
-html, body, main {
-    // height: 100%;
-    background-color: var(--background_color);
-}
-
-html {
+html{
+    background-color: var(--margin-color);
     font-size: var(--defauld-font-size,1rem);
     font-family: system-ui;
+}
+
+body, main {
+    background-color: var(--background_color);    
 }
 
 h2{
@@ -73,6 +75,7 @@ a{
 // Utilities
 .u-horisontal-menu{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     gap: var(--min-menu-gap, 1rem);
 }
@@ -133,19 +136,58 @@ a{
     border-radius: 0.25rem;
 }
 
+.u-radius-16{
+    border-radius: 1rem;
+    // border: solid red;
+}
+
 .u-shadow{
     box-shadow: 10px 10px 15px var(--shadow-color,grey);
+}
+
+.u-shadow-small{
+    box-shadow: 5px 5px 10px grey;
 }
 
 .u-border{
     border: 1px solid var(--color-secondary);
 }
+
+.u-bg-color-margin{
+    background-color: var(--margin-color);
+}
+
+.u-card-body{
+    width: 97vw;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;  
+}
+
+.u-24-font{
+    font-size: 1.5rem;
+}
+
+
 // *** END OF UTILITIES ***
 
 // Block
+
+button{
+    cursor: pointer;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.about-us{
+    width: min(60rem, 80vw);
+    margin: auto;
+}
+
 .iframe{
     width: 100%;
-    height: var(--iframe-height, 7rem);
+    height: var(--iframe-height, 6.5rem);
     // border: solid red;   
 }
 
@@ -155,6 +197,7 @@ header{
     justify-content: space-between;
     align-items: center;
     flex: 0;
+    background-color: var(--background_color);
 }
 
 footer{
@@ -163,6 +206,7 @@ footer{
     justify-content: space-between;
     align-items: center;
     flex: 0;
+    background-color: var(--background_color);
 }
 
 .special_offers_galery{
@@ -193,6 +237,10 @@ footer{
     :last-child{
         margin: auto auto 0 auto;        
     }
+
+    &:hover {
+        transform: scale(1.1);
+    }
 }
 
 .card_image{
@@ -202,8 +250,38 @@ footer{
 }
 
 .search-input {
-    font-size: var(--defauld-font-size,1rem);
+    font-size: var(--default-font-size,1rem);
 }
+
+.input{
+    font-size: var(--default-font-size,1rem);
+    width: min(60ch,80vh);
+}
+
+.message-input{
+    font-size: var(--default-font-size,1rem);
+    width: min(60ch,80vh);
+    
+    
+}
+
+.contact-us{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--min-menu-gap, 1rem);
+}
+
+// summary{
+//     list-style: none;
+//     cursor: pointer;
+//     &:hover {
+//         transform: scale(1.1);
+//         color: var(--text_color_secodary);
+//     }
+// }
+
+
 // *** END OF BLOCK ***
 
 // Exceptions
