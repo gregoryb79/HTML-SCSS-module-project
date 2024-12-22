@@ -308,9 +308,6 @@ footer{
         height: 17rem;
     }
     
-    // button{
-    //     border-radius: inherit;
-    // }
     
     .productsHeader{
         h3{
@@ -337,12 +334,22 @@ footer{
             justify-content: space-between;
             text-align: center;
             min-width: 15rem;
-            min-height: 19rem;
+            min-height: 17rem;
             cursor: pointer;
-            border-radius: 15rem;
+            border-radius: 2rem;
             
-            h4 p{
-                padding-bottom: 2rem;
+            h4{
+                padding-top: 0.7rem;
+            }
+
+            h4, p{
+                padding-bottom: 0.2rem;
+            }
+
+            button{
+                margin-bottom: 0.7rem;
+                border-radius: 15rem;
+                padding: 0.7rem;
             }
         }
     }
