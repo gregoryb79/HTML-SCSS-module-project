@@ -12,6 +12,8 @@
     --shadow-color: #d5d8f6;
 }
 
+$bp-mobile: 27rem;
+
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
 //*** Default parameters *** == Reset
@@ -138,7 +140,6 @@ a{
 
 .u-radius-16{
     border-radius: 1rem;
-    // border: solid red;
 }
 
 .u-shadow{
@@ -180,15 +181,16 @@ button{
     }
 }
 
+.site-nav-menu{
+    @media screen and (max-width: $bp-mobile){
+        display: none;
+        // background-color: red;
+    }
+}
+
 .about-us{
     width: min(60rem, 80vw);
     margin: auto;
-}
-
-.iframe{
-    width: 100%;
-    height: var(--iframe-height, 6.5rem);
-    // border: solid red;   
 }
 
 header{
@@ -198,6 +200,9 @@ header{
     align-items: center;
     flex: 0;
     background-color: var(--background_color);
+    @media screen and (max-width: $bp-mobile){
+       flex-direction: column;              
+    }
 }
 
 footer{
@@ -207,6 +212,9 @@ footer{
     align-items: center;
     flex: 0;
     background-color: var(--background_color);
+    @media screen and (max-width: $bp-mobile){
+        flex-direction: column-reverse;              
+     }
 }
 
 .special_offers_galery{
