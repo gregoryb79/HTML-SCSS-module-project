@@ -6,19 +6,147 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Title & Links -->
-  <title>Timeless Treasures | Out Products</title>
+  <title>Timeless Treasures | Our Products</title>
   <link rel="shortcut icon" href="./pictures/TT-logo.png" type="image/x-icon">
   <link rel="stylesheet" href="./dist/styles.css">
+  <!-- <link rel="stylesheet" href="./dist/productsPage.css"> -->
 
 </head>
 
-<body>
-      <!-- Since the Header is repeated on each page - there is a separete header.html file
-     which is added via <iframe> -->
-      <header> 
-        <iframe src="header.html" class="iframe" aria-label="Site Header"></iframe>
-    </header>
+<body class="u-card-body u-radius-16">
+  <header class="u-radius-16">
+    
+    <a href="index.html" aria-label="internal link to Home Page" target="_parent">
+        <img src="pictures/TT-logo.png" alt="Timeless Treasures Logo" class="logo_image u-left-margin-1rem">
+    </a>
 
+    <menu class="u-horisontal-menu u-put-to-center u-put-to-start" aria-label="Site Navigation Menu">
+        <li>
+            <a href="index.html" aria-label="internal link to Home Page" target="_parent">
+                Home
+            </a>
+        </li>
+        <li>
+            <a href="products.html" aria-label="internal link to Products Page" target="_parent">
+                Products
+            </a>
+        </li>
+        <li>
+            <a href="about-us.html" aria-label="internal link to About Us Page" target="_parent">
+                About Us
+            </a>
+        </li>
+    </menu>
+    
+    <menu class="u-horisontal-menu u-right-margin-1rem" aria-label="Site Utilities Menu">
+        <li>
+            <input type="text" placeholder="Search..." class="search-input u-padding-8 u-radius-4" />           
+        </li>
+        <li>
+            <a href="shopping-cart.html" aria-label="Go to Shopping Cart" target="_parent">
+                🛒
+            </a>
+        </li>
+        <li>☰</li>
+    </menu>  
+
+</header>
+
+    <main id="productsPage">
+
+      <header class="productsHeader">
+        <h3>Hot Products</h3>
+      </header>
+
+      <article class="gridCont">
+        <ul class="grid12">
+          <li class="col11 u-shadow"> <!-- #1 -->
+            <img src="pictures/0000673173_OG.JPG" alt=""></img>
+            <h4>Antique Chair</h4>
+            <p>Lorem ipsum dolor sit amet</p>
+            <p>$100</p>
+            <p><button>Add To Cart</button></p>
+          </li>
+          <li class="col11 u-shadow"> <!-- #2 -->
+            <img src="./pictures/antique1.jpg" alt=""></img>
+            <h4>CEORGIVS coin</h4>
+            <p>Lorem, ipsum dolor.</p>
+            <p>$578</p>
+            <p><button>Add To Cart</button></p>
+          </li>
+          <li class="col11 u-shadow"> <!-- #3 -->
+            <img src="pictures/0000369201_OG.JPG" alt=""></img>
+            <h4>Console Table</h4>
+            <p>Lorem, ipsum dolor!</p>
+            <p>$1,000</p>
+            <p><button>Add To Cart</button></p>
+          </li>
+          <li class="col11 u-shadow"> <!-- #4 -->
+            <img src="./pictures/antique12.jpg" alt=""></img>
+            <h4>Five Agurut</h4>
+            <p>Lorem, ipsum dolor!</p>
+            <p>$125</p>
+            <p><button>Add To Cart</button></p>
+          </li>
+          <li class="col11 u-shadow"> <!-- #5 -->
+            <img src="./pictures/antique3.jpg" alt=""></img>
+            <h4>Royal throne</h4>
+            <p>Lorem ipsum dolor sit.</p>
+            <p>$2550</p>
+            <p><button>Add To Cart</button></p>
+          </li>
+          <li class="col11 u-shadow"> <!-- #6 -->
+            <img src="pictures/0000329639_OG.JPG" alt=""></img>
+            <h4>Luxurious Chair</h4>
+            <p>Lorem ipsum dolor sit</p>
+            <p>$500</p>
+            <p><button>Add To Cart</button></p>
+          </li>
+          <li class="col11 u-shadow"> <!-- #7 -->
+            <img src="./pictures/antique10.JPG" alt=""></img>
+            <h4>Ancient scroll</h4>
+            <p>$5000</p>
+            <p>Lorem ipsum dolor sit.</p>
+            <p><button>Add To Cart</button></p>
+          </li>
+          <li class="col11 u-shadow"> <!-- #8 -->
+            <img src="./pictures/antique6.jpg" alt=""></img>
+            <h4>Aphrodite's table</h4>
+            <p>$450</p>
+            <p>The original one!</p>
+            <p><button>Add To Cart</button></p>
+          </li>
+          <li class="col11 u-shadow"> <!-- #9 -->
+            <img src="pictures/0000393718_OG.JPG" alt=""></img>
+            <h4>Antique Vase</h4>
+            <p>Lorem ipsum dolor sit amet consectetur</p>
+            <p>$3,500</p>
+            <p><button>Add To Cart</button></p>
+          </li>
+          <li class="col11 u-shadow"> <!-- #10 -->
+            <img src="./pictures/antique8.webp" alt=""></img>
+            <h4>Anniverseries Tillions</h4>
+            <p>Lorem ipsum dolor sit.</p>
+            <p>$920</p>
+            <p><button>Add To Cart</button></p>
+          </li>
+          <li class="col11 u-shadow"> <!-- #11 -->
+            <img src="./pictures/antique4.webp" alt=""></img>
+            <h4>King Charles's wife's rings</h4>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>$17,534</p>
+            <p><button>Add To Cart</button></p>
+          </li>
+          <li class="col11 u-shadow"> <!-- #12 -->
+            <img src="./pictures/antique5.webp" alt=""></img>
+            <h4>Napolione's Wristwatch</h4>
+            <p>And, it is ticking!</p>
+            <p>$65,059</p>
+            <p><button>Add To Cart</button></p>
+          </li>
+        </ul>
+      </article>
+    </main>
 
   
 
@@ -27,11 +155,50 @@
 
 
 
-        <!-- Since the Footer is repeated on each page - there is a separete header.html file
-     which is added via <iframe> 
-      <footer class="u-top-margin">
-        <iframe src="footer.html" class="iframe" aria-label="Site footer"></iframe>
-    </footer> -->
+    <footer class="u-radius-16">
+      
+      <a href="index.html" aria-label="internal link to Home Page" target="_parent">
+          <img src="pictures/TT-logo.png" alt="Timeless Treasures Logo" class="logo_image u-left-margin-1rem">
+      </a>
+      
+  
+      <menu class="u-horisontal-menu u-put-to-center u-put-to-end" aria-label="Site Navigation Menu">
+          <li>
+              <a href="index.html" aria-label="internal link to Home Page" target="_parent"> 
+                  Home
+              </a>
+          </li>
+          <li>
+              <a href="products.html" aria-label="internal link to Products Page" target="_parent">
+                  Products
+              </a>
+          </li>
+          <li>
+              <a href="about-us.html" aria-label="internal link to About Us Page" target="_parent">
+                  About Us
+              </a>
+          </li>
+      </menu>
+      
+      <menu class="u-horisontal-menu u-right-margin-1rem">
+          <li>
+              <a href="#" aria-label="external link to Facebook page">
+                  <img src="pictures/facebook-logo.avif" alt="Facebook Logo" class="logo_image_small">
+              </a>            
+          </li>
+          <li>
+              <a href="#" aria-label="external link to Instagram page">
+                  <img src="pictures/pngwing.com.png" alt="Instagram Logo" class="logo_image_small">
+              </a>           
+          </li>
+          <li>
+              <a href="#" aria-label="external link to WhatsApp page">
+                  <img src="pictures/whatsapp-xxl.png" alt="WhatsApp Logo" class="logo_image_small">
+              </a>            
+          </li>
+      </menu>   
+  
+  </footer>
 </body>
 
 </html>
