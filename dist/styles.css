@@ -219,6 +219,32 @@ footer {
   }
 }
 
+.hamburger-menu {
+  position: relative;
+}
+.hamburger-menu .menu-checkbox {
+  display: none;
+}
+.hamburger-menu label {
+  cursor: pointer;
+}
+.hamburger-menu .overlay-menu {
+  position: absolute;
+  right: 0px;
+  top: 2rem;
+  z-index: 10;
+  background-color: var(--background_color);
+  height: 0;
+  width: 7rem;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.hamburger-menu .menu-checkbox:checked ~ .overlay-menu {
+  height: 14.5rem;
+  opacity: 1;
+}
+
 header {
   display: flex;
   flex-wrap: wrap;
@@ -271,6 +297,11 @@ header {
   .site-nav-menu {
     display: none;
   }
+}
+
+summary {
+  cursor: pointer;
+  list-style: none;
 }
 
 .special_offers_galery {

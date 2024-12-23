@@ -15,11 +15,13 @@
 <body class="u-card-body u-radius-16">
 
     <header class="u-radius-16">
-            
+
+        <!-- Web Site Logo  -->
         <a href="index.html" aria-label="internal link to Home Page" target="_parent">
             <img src="pictures/TT-logo.png" alt="Timeless Treasures Logo" class="logo_image u-left-margin-1rem">
         </a>
-    
+
+        <!-- Internal Navigation Menu     -->
         <menu class="site-nav-menu u-horisontal-menu u-put-to-center u-put-to-start" aria-label="Site Navigation Menu">
             <li>
                 <a href="index.html" aria-label="internal link to Home Page" target="_parent">
@@ -47,7 +49,42 @@
                     🛒
                 </a>
             </li>
-            <li>☰</li>
+            <li class="hamburger-menu"> <!-- Drop Down animated "Hamburger" Menu -->
+                <input type="checkbox" id="isHamburgerOpen" class="menu-checkbox">
+                <label for="isHamburgerOpen">☰</label>
+                <menu class="overlay-menu u-radius-4 u-padding-4 u-shadow-small">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="products.html">Hot Products</a>
+                    </li>
+                    <li>
+                        <a href="#">Furniture</a>
+                    </li>
+                    <li>
+                        <a href="#">Heirloom</a>
+                    </li>
+                    <li>
+                        <a href="#">Jewlery</a>
+                    </li>
+                    <li>
+                        <a href="#">Books</a>
+                    </li>
+                    <li>
+                        <a href="#">Ceramics</a>
+                    </li>
+                    <li>
+                        <a href="#">Artwork</a>
+                    </li>
+                    <li>
+                        <a href="#">Curiosities</a>
+                    </li>
+                    <li>
+                        <a href="about-us.html">About Us</a>
+                    </li>
+                </menu>
+            </li>
         </menu>  
     
     </header>

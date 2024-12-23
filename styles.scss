@@ -221,6 +221,7 @@ button {
     gap: var(--min-menu-gap, 1rem);
 }
 
+
 footer {
     display: flex;
     flex-wrap: wrap;
@@ -231,6 +232,42 @@ footer {
     @media screen and (max-width: $bp-mobile) {
         flex-direction: column-reverse;              
     }
+}
+
+.hamburger-menu{
+    position: relative;
+    
+    .menu-checkbox{
+        display: none;
+    }
+
+    label{
+        cursor: pointer;
+    }
+
+    .overlay-menu{
+        position: absolute;
+        right: 0px;
+        top: 2rem;
+        z-index: 10;
+        background-color: var(--background_color);
+        height: 0;
+        width: 7rem;
+        overflow: hidden;
+        opacity: 0;
+
+        transition: all 0.3s;
+    }
+
+    .menu-checkbox:checked{
+        ~.overlay-menu{
+            height: 14.5rem;
+            opacity: 1;
+
+        }
+    }
+
+
 }
 
 header {
@@ -280,6 +317,11 @@ header {
         display: none;
         // background-color: red;
     }
+}
+
+summary{
+    cursor: pointer;
+    list-style: none;
 }
 
 .special_offers_galery {
