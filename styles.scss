@@ -5,16 +5,27 @@
 
 :root{
     --text_color_main: #000000;
-    --text_color_secodary: #545454;
+    --text_color_secondary: #545454;
     --background_color: #FAFAFF;
     --color-secondary: #545454;
     --margin-color:#d5d8f6;
     --shadow-color: #d5d8f6;
+
+    @media (prefers-color-scheme: dark) {
+        --text_color_main: #FFFFFF;
+        --text_color_secondary: #cccccc;
+        --background_color: #36454F;
+        --color-secondary: #ABABAB;
+        --margin-color: #808080;
+        --shadow-color: #d5d8f6;
+    }
 }
 
 $bp-mobile: 27rem;
 
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+
 
 //*** Default parameters *** == Reset
 *, *::before, *::after {
@@ -35,6 +46,7 @@ html{
     background-color: var(--margin-color);
     font-size: var(--defauld-font-size,1rem);
     font-family: system-ui;
+    color: var(--text_color_main);
 }
 
 body, main {
@@ -54,7 +66,7 @@ h3{
 }
 
 p{
-    color: var(--text_color_secodary);
+    color: var(--text_color_secondary);
 }
 
 a{
@@ -62,7 +74,7 @@ a{
     text-decoration: none;
     cursor: pointer;
     &:hover{
-        color: var(--text_color_secodary);        
+        color: var(--text_color_secondary);        
     }
 }
 //*** END of RESET ********
@@ -193,12 +205,15 @@ button {
 }
 
 .card {
-    width: var(--card-width, 13rem);
-    height: var(--card-height, 22rem);
     display: flex;
     flex-direction: column;
+    
+    width: var(--card-width, 13rem);
+    height: var(--card-height, 22rem);
+        
     :first-child {
         margin-bottom: 0.5rem;
+        margin-top: 0;
     }     
     :last-child {
         margin: auto auto 0 auto;        
@@ -206,7 +221,7 @@ button {
 
     &:hover {
         transform: scale(1.1);
-    }
+    }  
 }
 
 .card_image {
