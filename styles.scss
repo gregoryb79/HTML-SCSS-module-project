@@ -255,7 +255,6 @@ footer {
         width: 7rem;
         overflow: hidden;
         opacity: 0;
-
         transition: all 0.3s;
     }
 
@@ -263,11 +262,8 @@ footer {
         ~.overlay-menu{
             height: 14.5rem;
             opacity: 1;
-
         }
     }
-
-
 }
 
 header {
