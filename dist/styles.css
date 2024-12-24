@@ -323,6 +323,10 @@ summary {
   gap: var(--min-cards-gap, 2rem);
 }
 
+.u-cursor-pointer {
+  cursor: pointer;
+}
+
 #productsPage {
   margin: auto;
 }
@@ -358,7 +362,6 @@ summary {
   text-align: center;
   min-width: 15rem;
   min-height: 17rem;
-  cursor: pointer;
   border-radius: 2rem;
 }
 #productsPage .gridCont .col11 h4 {
@@ -371,4 +374,32 @@ summary {
   margin-bottom: 0.7rem;
   border-radius: 15rem;
   padding: 0.7rem;
+  animation: none;
+}
+#productsPage .gridCont .col11 button:hover {
+  transform: none;
+  animation: hover-btn 3s forwards;
+}
+@keyframes hover-btn {
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.3;
+  }
+  100% {
+    scale: 1;
+  }
+}
+#productsPage .gridCont .col11:hover {
+  animation: hover-col11 1s ease-out forwards;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+@keyframes hover-col11 {
+  0% {
+    scale: 1;
+  }
+  100% {
+    scale: 1.05;
+  }
 }

@@ -352,9 +352,16 @@ summary{
 
 // Products.html style page (Ariel)
 
+// Ariel utillities:
+
+.u-cursor-pointer{
+    cursor: pointer;
+}
+
 #productsPage{
     margin: auto;
     
+
     header{
         display: block;
     }
@@ -366,7 +373,7 @@ summary{
         width: 15rem;
         height: 17rem;
     }
-    
+
     
     .productsHeader{
         h3{
@@ -394,8 +401,8 @@ summary{
             text-align: center;
             min-width: 15rem;
             min-height: 17rem;
-            cursor: pointer;
             border-radius: 2rem;
+            // transition: transform 0.3s ease, box-shadow 0.3s ease;
             
             h4{
                 padding-top: 0.7rem;
@@ -404,11 +411,43 @@ summary{
             h4, p{
                 padding-bottom: 0.2rem;
             }
-
+            
             button{
                 margin-bottom: 0.7rem;
                 border-radius: 15rem;
                 padding: 0.7rem;
+                animation: none;
+                // background-color: #FFFFFF;
+                
+                &:hover{
+                    transform: none; // כדי לבטל את ההובר משורה 200
+                    animation: hover-btn 3s forwards;
+                }
+                @keyframes hover-btn {
+                    0%{
+                        scale: 1;
+                    }
+                    50%{
+                        scale: 1.3;
+                    }
+                    100%{
+                        scale: 1;
+                    }
+                }
+                
+            }
+
+            &:hover{
+                animation: hover-col11 1s ease-out forwards;
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+            }
+            @keyframes hover-col11 {
+                0%{
+                    scale: 1;
+                }
+                100%{
+                    scale: 1.05;
+                }
             }
         }
     }
