@@ -398,12 +398,15 @@ summary{
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            align-items: center;
             text-align: center;
             min-width: 15rem;
             min-height: 17rem;
             border-radius: 2rem;
             // transition: transform 0.3s ease, box-shadow 0.3s ease;
-            
+            overflow: hidden; /* מונע תוכן שגולש */
+            box-sizing: border-box; /* מבטיח שגבולות וחללים פנימיים לא ייצרו בעיות */
+
             h4{
                 padding-top: 0.7rem;
             }
@@ -417,11 +420,14 @@ summary{
                 border-radius: 15rem;
                 padding: 0.7rem;
                 animation: none;
-                // background-color: #FFFFFF;
+                background: #d6d8f3;
+
+                position: relative; /* חובה בשביל `::before` */
+                overflow: hidden;
                 
                 &:hover{
                     transform: none; // כדי לבטל את ההובר משורה 200
-                    animation: hover-btn 3s forwards;
+                    animation: hover-btn 2s forwards;
                 }
                 @keyframes hover-btn {
                     0%{
@@ -433,6 +439,22 @@ summary{
                     100%{
                         scale: 1;
                     }
+                }
+
+                &::before{
+                    content: "";
+                    position: absolute;
+                    top: -100%;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: radial-gradient(circle, rgba(212,215,244,0.5) 0%, rgba(143,146,180,1) 100%); 
+                    z-index: -1;
+                    transition: all 1.5s ease-in-out;
+                }
+
+                &:hover::before{
+                    top: 0; // כדי שהצבע בהובר יחזור למקום אחרי שמורידים עכבר ממנו
                 }
                 
             }
