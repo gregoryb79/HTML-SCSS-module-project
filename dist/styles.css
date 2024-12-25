@@ -192,6 +192,31 @@ button:hover {
   transform: scale(1.1);
 }
 
+.card {
+  display: flex;
+  flex-direction: column;
+  width: var(--card-width, 13rem);
+  height: var(--card-height, 22rem);
+}
+
+.card :first-child {
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+.card :last-child {
+  margin: auto auto 0 auto;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card_image {
+  width: 100%;
+  aspect-ratio: 1;
+}
+
 .cart-page {
   display: inline;
   box-sizing: border-box;
