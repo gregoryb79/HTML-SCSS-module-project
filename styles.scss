@@ -19,6 +19,10 @@
         --margin-color: #808080;
         --shadow-color: #d5d8f6;
     }
+
+    --card-width: 15rem;
+    --card-height: 27rem;
+
 }
 
 $bp-mobile: 27rem;
@@ -162,6 +166,10 @@ a{
     border-radius: 1rem;
 }
 
+.u-radius-32{
+    border-radius: 2rem;
+}
+
 .u-radius-4{
     border-radius: 0.25rem;
 }
@@ -206,29 +214,43 @@ button {
     &:hover {
         transform: scale(1.1);
     }
+    transition: all 0.3s;
 }
 
 .card {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    // gap: 0.5rem;
+    overflow: hidden;
+    text-align: center;
+    
     width: var(--card-width, 13rem);
     height: var(--card-height, 22rem);
-  }
-  .card :first-child {
-    margin-bottom: 0.5rem;
-    margin-top: 0;
-  }
-  .card :last-child {
-    margin: auto auto 0 auto;
-  }
-  .card:hover {
-    transform: scale(1.1);
-  }
+        
+    :first-child {
+        margin-bottom: 0.5rem;
+    }     
+
+    :nth-child(4){
+        margin-top: 1rem;
+    }
+    
+    :last-child {
+        margin: auto auto 0.5rem auto;        
+    }
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    transition: all 0.3s;
+}
   
-  .card_image {
+.card_image {
     width: 100%;
     aspect-ratio: 1;
-  }
+}
   
 .cart-page {
     display: inline;
