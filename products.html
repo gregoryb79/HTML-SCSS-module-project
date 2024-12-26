@@ -8,19 +8,21 @@
   <!-- Title & Links -->
   <title>Timeless Treasures | Our Products</title>
   <link rel="shortcut icon" href="./pictures/TT-logo.png" type="image/x-icon">
+  
   <link rel="stylesheet" href="./dist/styles.css">
-  <!-- <link rel="stylesheet" href="./dist/productsPage.css"> -->
-
+  
 </head>
 
 <body class="u-card-body u-radius-16">
   <header class="u-radius-16">
-    
+
+    <!-- Web Site Logo  -->
     <a href="index.html" aria-label="internal link to Home Page" target="_parent">
         <img src="pictures/TT-logo.png" alt="Timeless Treasures Logo" class="logo_image u-left-margin-1rem">
     </a>
 
-    <menu class="u-horisontal-menu u-put-to-center u-put-to-start" aria-label="Site Navigation Menu">
+    <!-- Internal Navigation Menu     -->
+    <menu class="site-nav-menu u-horisontal-menu u-put-to-center u-put-to-start" aria-label="Site Navigation Menu">
         <li>
             <a href="index.html" aria-label="internal link to Home Page" target="_parent">
                 Home
@@ -47,7 +49,42 @@
                 🛒
             </a>
         </li>
-        <li>☰</li>
+        <li class="hamburger-menu"> <!-- Drop Down animated "Hamburger" Menu -->
+            <input type="checkbox" id="isHamburgerOpen" class="menu-checkbox">
+            <label for="isHamburgerOpen">☰</label>
+            <menu class="overlay-menu u-radius-4 u-padding-4 u-shadow-small">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="products.html">Hot Products</a>
+                </li>
+                <li>
+                    <a href="#">Furniture</a>
+                </li>
+                <li>
+                    <a href="#">Heirloom</a>
+                </li>
+                <li>
+                    <a href="#">Jewlery</a>
+                </li>
+                <li>
+                    <a href="#">Books</a>
+                </li>
+                <li>
+                    <a href="#">Ceramics</a>
+                </li>
+                <li>
+                    <a href="#">Artwork</a>
+                </li>
+                <li>
+                    <a href="#">Curiosities</a>
+                </li>
+                <li>
+                    <a href="about-us.html">About Us</a>
+                </li>
+            </menu>
+        </li>
     </menu>  
 
 </header>
@@ -61,100 +98,94 @@
       <article class="gridCont">
         <ul class="grid12">
           <li class="col11 u-shadow"> <!-- #1 -->
-            <img src="pictures/0000673173_OG.JPG" alt=""></img>
+            <img class="u-cursor-pointer" src="pictures/0000673173_OG.JPG" alt=""></img>
             <h4>Antique Chair</h4>
             <p>Lorem ipsum dolor sit amet</p>
             <p>$100</p>
-            <p><button>Add To Cart</button></p>
+            <p><button class="u-cursor-pointer">Add To Cart</button></p>
           </li>
           <li class="col11 u-shadow"> <!-- #2 -->
-            <img src="./pictures/antique1.jpg" alt=""></img>
+            <img class="u-cursor-pointer" src="./pictures/antique1.jpg" alt=""></img>
             <h4>CEORGIVS coin</h4>
             <p>Lorem, ipsum dolor.</p>
             <p>$578</p>
-            <p><button>Add To Cart</button></p>
+            <p><button class="u-cursor-pointer">Add To Cart</button></p>
           </li>
           <li class="col11 u-shadow"> <!-- #3 -->
-            <img src="pictures/0000369201_OG.JPG" alt=""></img>
+            <img class="u-cursor-pointer" src="pictures/0000369201_OG.JPG" alt=""></img>
             <h4>Console Table</h4>
             <p>Lorem, ipsum dolor!</p>
             <p>$1,000</p>
-            <p><button>Add To Cart</button></p>
+            <p><button class="u-cursor-pointer">Add To Cart</button></p>
           </li>
           <li class="col11 u-shadow"> <!-- #4 -->
-            <img src="./pictures/antique12.jpg" alt=""></img>
+            <img class="u-cursor-pointer" src="./pictures/antique12.jpg" alt=""></img>
             <h4>Five Agurut</h4>
             <p>Lorem, ipsum dolor!</p>
             <p>$125</p>
-            <p><button>Add To Cart</button></p>
+            <p><button class="u-cursor-pointer">Add To Cart</button></p>
           </li>
           <li class="col11 u-shadow"> <!-- #5 -->
-            <img src="./pictures/antique3.jpg" alt=""></img>
+            <img class="u-cursor-pointer" src="./pictures/antique3.jpg" alt=""></img>
             <h4>Royal throne</h4>
             <p>Lorem ipsum dolor sit.</p>
             <p>$2550</p>
-            <p><button>Add To Cart</button></p>
+            <p><button class="u-cursor-pointer">Add To Cart</button></p>
           </li>
           <li class="col11 u-shadow"> <!-- #6 -->
-            <img src="pictures/0000329639_OG.JPG" alt=""></img>
+            <img class="u-cursor-pointer" src="pictures/0000329639_OG.JPG" alt=""></img>
             <h4>Luxurious Chair</h4>
             <p>Lorem ipsum dolor sit</p>
             <p>$500</p>
-            <p><button>Add To Cart</button></p>
+            <p><button class="u-cursor-pointer">Add To Cart</button></p>
           </li>
           <li class="col11 u-shadow"> <!-- #7 -->
-            <img src="./pictures/antique10.JPG" alt=""></img>
+            <img class="u-cursor-pointer" src="./pictures/antique10.JPG" alt=""></img>
             <h4>Ancient scroll</h4>
             <p>$5000</p>
             <p>Lorem ipsum dolor sit.</p>
-            <p><button>Add To Cart</button></p>
+            <p><button class="u-cursor-pointer">Add To Cart</button></p>
           </li>
           <li class="col11 u-shadow"> <!-- #8 -->
-            <img src="./pictures/antique6.jpg" alt=""></img>
+            <img class="u-cursor-pointer" src="./pictures/antique6.jpg" alt=""></img>
             <h4>Aphrodite's table</h4>
             <p>$450</p>
             <p>The original one!</p>
             <p><button>Add To Cart</button></p>
           </li>
           <li class="col11 u-shadow"> <!-- #9 -->
-            <img src="pictures/0000393718_OG.JPG" alt=""></img>
+            <img class="u-cursor-pointer" src="pictures/0000393718_OG.JPG" alt=""></img>
             <h4>Antique Vase</h4>
             <p>Lorem ipsum dolor sit amet consectetur</p>
             <p>$3,500</p>
-            <p><button>Add To Cart</button></p>
+            <p><button class="u-cursor-pointer">Add To Cart</button></p>
           </li>
           <li class="col11 u-shadow"> <!-- #10 -->
-            <img src="./pictures/antique8.webp" alt=""></img>
+            <img class="u-cursor-pointer" src="./pictures/antique8.webp" alt=""></img>
             <h4>Anniverseries Tillions</h4>
             <p>Lorem ipsum dolor sit.</p>
             <p>$920</p>
-            <p><button>Add To Cart</button></p>
+            <p><button class="u-cursor-pointer">Add To Cart</button></p>
           </li>
           <li class="col11 u-shadow"> <!-- #11 -->
-            <img src="./pictures/antique4.webp" alt=""></img>
+            <img class="u-cursor-pointer" src="./pictures/antique4.webp" alt=""></img>
             <h4>King Charles's wife's rings</h4>
             <p>Lorem ipsum dolor sit amet.</p>
             <p>$17,534</p>
-            <p><button>Add To Cart</button></p>
+            <p><button class="u-cursor-pointer">Add To Cart</button></p>
           </li>
           <li class="col11 u-shadow"> <!-- #12 -->
-            <img src="./pictures/antique5.webp" alt=""></img>
+            <img class="u-cursor-pointer" src="./pictures/antique5.webp" alt=""></img>
             <h4>Napolione's Wristwatch</h4>
             <p>And, it is ticking!</p>
             <p>$65,059</p>
-            <p><button>Add To Cart</button></p>
+            <p><button class="u-cursor-pointer">Add To Cart</button></p>
           </li>
         </ul>
       </article>
     </main>
 
   
-
-
-
-
-
-
     <footer class="u-radius-16">
       
       <a href="index.html" aria-label="internal link to Home Page" target="_parent">
@@ -162,7 +193,7 @@
       </a>
       
   
-      <menu class="u-horisontal-menu u-put-to-center u-put-to-end" aria-label="Site Navigation Menu">
+      <menu class="site-nav-menu u-horisontal-menu u-put-to-center u-put-to-end" aria-label="Site Navigation Menu">
           <li>
               <a href="index.html" aria-label="internal link to Home Page" target="_parent"> 
                   Home

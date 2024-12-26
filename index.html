@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,21 +6,22 @@
     
     <link rel="shortcut icon" href="./pictures/TT-logo.png" type="image/x-icon">
     <title>Timeless Treasures</title>
+    
     <link rel="stylesheet" href="dist/styles.css" />
+   
 </head>
-
-
-
 
 <body class="u-card-body u-radius-16">
 
     <header class="u-radius-16">
-    
+
+        <!-- Web Site Logo  -->
         <a href="index.html" aria-label="internal link to Home Page" target="_parent">
             <img src="pictures/TT-logo.png" alt="Timeless Treasures Logo" class="logo_image u-left-margin-1rem">
         </a>
-    
-        <menu class="u-horisontal-menu u-put-to-center u-put-to-start" aria-label="Site Navigation Menu">
+
+        <!-- Internal Navigation Menu     -->
+        <menu class="site-nav-menu u-horisontal-menu u-put-to-center u-put-to-start" aria-label="Site Navigation Menu">
             <li>
                 <a href="index.html" aria-label="internal link to Home Page" target="_parent">
                     Home
@@ -47,7 +48,42 @@
                     🛒
                 </a>
             </li>
-            <li>☰</li>
+            <li class="hamburger-menu"> <!-- Drop Down animated "Hamburger" Menu -->
+                <input type="checkbox" id="isHamburgerOpen" class="menu-checkbox">
+                <label for="isHamburgerOpen">☰</label>
+                <menu class="overlay-menu u-radius-4 u-padding-4 u-shadow-small">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="products.html">Hot Products</a>
+                    </li>
+                    <li>
+                        <a href="#">Furniture</a>
+                    </li>
+                    <li>
+                        <a href="#">Heirloom</a>
+                    </li>
+                    <li>
+                        <a href="#">Jewlery</a>
+                    </li>
+                    <li>
+                        <a href="#">Books</a>
+                    </li>
+                    <li>
+                        <a href="#">Ceramics</a>
+                    </li>
+                    <li>
+                        <a href="#">Artwork</a>
+                    </li>
+                    <li>
+                        <a href="#">Curiosities</a>
+                    </li>
+                    <li>
+                        <a href="about-us.html">About Us</a>
+                    </li>
+                </menu>
+            </li>
         </menu>  
     
     </header>
@@ -64,8 +100,8 @@
 
         
         <menu class="special_offers_galery" aria-label="Special Offers Menu">
-            <li class="card u-shadow u-padding-8 u-radius-4">
-                <a href="#" aria-label="link to special ofer item">
+            <li>
+                <a href="#"  class="card u-shadow u-padding-8 u-radius-4" aria-label="link to special ofer item">
                     <img src="pictures/0000170901_OG.JPG" alt="Special Offer product image" class="card_image">
                     <p class="u-focus-text">Lorem, ipsum dolor.</p>
                     <p>Repudiandae, dolor autem.</p>
@@ -73,8 +109,8 @@
                     <p class="u-focus-text">Price: 100$</p>
                 </a>               
             </li>
-            <li class="card u-shadow u-padding-8 u-radius-4">
-                <a href="product-details.html" aria-label="link to special ofer item">
+            <li>
+                <a href="product-details.html"  class="card u-shadow u-padding-8 u-radius-4" aria-label="link to special ofer item">
                     <img src="pictures/0000331278_OG.JPG" alt="Special Offer product image" class="card_image">
                     <p class="u-focus-text">Lorem, ipsum dolor.</p>
                     <p>Repudiandae, dolor autem.</p>
@@ -82,8 +118,8 @@
                     <p class="u-focus-text">Price: 100$</p>   
                 </a>                                 
             </li>
-            <li class="card u-shadow u-padding-8 u-radius-4">
-                <a href="#" aria-label="link to special ofer item">
+            <li>
+                <a href="#" class="card u-shadow u-padding-8 u-radius-4" aria-label="link to special ofer item">
                     <img src="pictures/0000562474_OG.JPG" alt="Special Offer product image" class="card_image">
                     <p class="u-focus-text">Lorem, ipsum dolor.</p>
                     <p>Repudiandae, dolor autem.</p>
@@ -91,8 +127,8 @@
                     <p class="u-focus-text">Price: 100$</p> 
                 </a>                                   
             </li>
-            <li class="card u-shadow u-padding-8 u-radius-4">
-                <a href="#" aria-label="link to special ofer item">
+            <li>
+                <a href="#"  class="card u-shadow u-padding-8 u-radius-4" aria-label="link to special ofer item">
                     <img src="pictures/0001241915_OG.JPG" alt="Special Offer product image" class="card_image">
                     <p class="u-focus-text">Lorem, ipsum dolor.</p>
                     <p>Minima, maiores voluptates.</p>
@@ -146,14 +182,14 @@
 
     </main>
 
-    <footer class="u-radius-16">
+    <footer class="u-radius-16 u-top-margin">
         
         <a href="index.html" aria-label="internal link to Home Page" target="_parent">
             <img src="pictures/TT-logo.png" alt="Timeless Treasures Logo" class="logo_image u-left-margin-1rem">
         </a>
         
     
-        <menu class="u-horisontal-menu u-put-to-center u-put-to-end" aria-label="Site Navigation Menu">
+        <menu class="site-nav-menu u-horisontal-menu u-put-to-center u-put-to-end" aria-label="Site Navigation Menu">
             <li>
                 <a href="index.html" aria-label="internal link to Home Page" target="_parent"> 
                     Home
