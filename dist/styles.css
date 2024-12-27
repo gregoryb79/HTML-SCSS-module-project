@@ -192,6 +192,15 @@ a:hover {
   }
 }
 
+.as-button {
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.as-button:hover {
+  transform: scale(1.1);
+}
+
 button {
   cursor: pointer;
   transition: all 0.3s;
@@ -295,6 +304,10 @@ footer {
   overflow: hidden;
   opacity: 0;
   transition: all 0.3s;
+}
+.hamburger-menu .overlay-menu:focus-within {
+  height: 14.5rem;
+  opacity: 1;
 }
 .hamburger-menu .menu-checkbox:checked ~ .overlay-menu {
   height: 14.5rem;
