@@ -79,7 +79,7 @@ a{
     cursor: pointer;
     &:hover{
         color: var(--text_color_secondary);        
-    }
+    }   
 }
 //*** END of RESET ********
 
@@ -209,6 +209,15 @@ a{
     }
 }
 
+.as-button{
+    display: inline-block;
+    cursor: pointer;
+    &:hover {
+        transform: scale(1.1);
+    }
+    transition: all 0.3s;
+}
+
 button {
     cursor: pointer;
     &:hover {
@@ -321,15 +330,21 @@ footer {
         width: 7rem;
         overflow: hidden;
         opacity: 0;
-        transition: all 0.3s;
-    }
+        transition: all 0.3s;   
+
+        &:focus-within{
+            height: 14.5rem;
+            opacity: 1;
+        }
+    }    
 
     .menu-checkbox:checked {
         ~.overlay-menu {
             height: 14.5rem;
-            opacity: 1;
+            opacity: 1;         
         }
     }
+ 
 }
 
 header {
