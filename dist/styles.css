@@ -250,26 +250,6 @@ button:hover {
   gap: var(--min-menu-gap, 1rem);
 }
 
-.delivery {
-  display: flex;
-  align-items: center;
-  margin: auto;
-}
-.delivery input[type=radio] {
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-}
-.delivery label {
-  font-size: 16px;
-  cursor: pointer;
-  display: inline-block;
-  padding: 10px;
-}
-.delivery input[type=radio]:checked + label {
-  color: #007BFF;
-}
-
 footer {
   display: flex;
   flex-wrap: wrap;
@@ -328,23 +308,6 @@ header {
   }
 }
 
-.info-card {
-  border: 1px solid black;
-  border-radius: 5px;
-  padding: 10px;
-  margin: 10px 10px;
-  font-size: 16px;
-  max-height: 100vh;
-  text-align: center;
-}
-.info-card h1 {
-  font-size: 25px;
-  text-align: center;
-}
-.info-card h2 {
-  font-size: 16px;
-}
-
 .input {
   font-size: var(--default-font-size, 1rem);
   width: min(60ch, 80vh);
@@ -375,25 +338,92 @@ header {
   }
 }
 
-.pricing {
+.search-input {
+  font-size: var(--default-font-size, 1rem);
+}
+
+@media screen and (max-width: 27rem) {
+  .site-nav-menu {
+    display: none;
+  }
+}
+
+.special_offers_galery {
   display: flex;
-  align-items: flex-end;
-  flex-direction: column;
-  padding: 0;
-  margin: 0;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: var(--min-cards-gap, 2rem);
 }
-.pricing .discount {
-  color: red;
+
+.shopping-card {
+  text-align: center;
+  padding: 1rem;
+  margin: 10px auto;
+  width: 80%;
+  max-width: calc(100vw - 4rem);
+  border: 1px solid black;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
 }
-.pricing .total-price {
+.shopping-card h2 {
+  font-size: 30px;
+}
+.shopping-card h3 {
+  font-size: 16px;
   font-weight: bold;
+}
+
+.cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0 auto;
+  padding: 2rem;
+  color: var(--text_color_secondary);
+}
+
+.shopping-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 1rem;
+  width: 80%;
+  gap: 10px;
+  flex: 1;
+}
+.shopping-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+.shopping-item p {
+  max-width: 100px;
+  text-align: center;
+}
+@media (max-width: 900px) {
+  .shopping-item {
+    flex-direction: column;
+  }
+}
+
+.delivery {
+  text-align: left;
 }
 
 .promocode {
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   gap: 10px;
-  width: 300px;
+  max-width: 50%;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 .promocode input[type=text] {
   padding: 10px;
@@ -415,61 +445,28 @@ header {
 .promocode p {
   font-size: 10px;
 }
-
-.search-input {
-  font-size: var(--default-font-size, 1rem);
-}
-
-.shopping-cart {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  padding: 10px;
-  margin: 0;
-}
-
-.shopping-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding: 10px;
-  margin: 5px auto;
-  border: 1px solid #ccc;
-  border-radius: 1px;
-  background-color: var(--background_color);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  box-sizing: border-box;
-  min-width: 100%;
-}
-@media screen and (max-width: 27rem) {
-  .shopping-item {
-    max-width: 15.5rem;
-    min-width: 70%;
-  }
-}
-.shopping-item img {
-  width: 50px;
-  height: 50px;
-  object-fit: cover;
-}
-.shopping-item p {
-  max-width: 100px;
-  color: var(--text_color_secodary);
-}
-
-@media screen and (max-width: 27rem) {
-  .site-nav-menu {
-    display: none;
+@media (max-width: 400px) {
+  .promocode {
+    flex-wrap: wrap;
   }
 }
 
-.special_offers_galery {
+.pricing {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: var(--min-cards-gap, 2rem);
+  flex-direction: row;
+  gap: 10px;
+  padding: 1rem;
+}
+.pricing ul :last-child {
+  font-weight: bold;
+}
+.pricing ul :nth-child(2) {
+  color: red;
+}
+@media (max-width: 450px) {
+  .pricing {
+    flex-direction: column;
+  }
 }
 
 .product-details-main {

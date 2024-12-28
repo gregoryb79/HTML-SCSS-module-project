@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="dist/styles.css" />
+    <link rel="stylesheet" href="dist/shopping-cart-styles.css" />
     
     <title>Timeless Treasures | Shopping Cart</title>
     <link rel="shortcut icon" href="./pictures/TT-logo.png" type="image/x-icon">
@@ -87,10 +88,10 @@
     
     </header>
 
-    <main class="cart-page">
-        <article class="info-card">
+    <main class="stack">
+        <article class="shopping-card">
             <h1>Cart</h1>
-            <ul class="shopping-cart">
+            <ul class="cart">
                 <li class="shopping-item">
                     <img src="pictures/0000673173_OG.JPG" alt="antique chair">
                     <p>Antique Chair</p>
@@ -126,11 +127,11 @@
             </ul>
         </article>
 
-        <article  class="info-card">
+        <article  class="shopping-card">
             <h2>Your Order</h2>
-            <ul class="purchase-info">
-                <li class="info-item">
-                    <p>Delivery</p>
+            <ul class="cart">
+                <li class="shopping-item">
+                    <h3>Delivery</h3>
                     <form class=delivery>
                         <label>
                           <input type="radio" name="option" value="option1">
@@ -144,25 +145,30 @@
                       </form>
                       
                 </li>
-                <li class="info-item">
+                <li class="shopping-item">
                     <form class="promocode">
                         <label for="coupon-code"></label>
                         <input type="text" id="coupon-code" name="coupon-code" placeholder="Promocode">
                         <button type="submit">Apply</button>
                       </form>
-                </li>
-                <li class="info-item">
-                    <p>Summary</p>
-                        <div class="pricing">
-                          <p class="pricing-name">Subtotal      $ 5,100</p>
-                          <p class="discount">Discount       $ 1,020</p>
-                          <p>delivery       $ 10</p>
-                          <p class="total-price">Total          $ 4,090</p>
-                        </div>
-                      </form>
-                </li>
-                <li class="info-item">
+                    </li>
 
+                <li class="shopping-item">
+                    <h3>Summary</h3>
+                    <ul class="pricing">
+                        <ul>
+                            <li>Subtotal</li>
+                            <li>Discount</li>
+                            <li>Delivery</li>
+                            <li>Total</li>
+                        </ul>
+                        <ul>
+                            <li>$ 5,100</li>
+                            <li>$ 1,020</li>
+                            <li>$ 10</li>
+                            <li>$ 4,090</li>
+                        </ul>
+                    </ul>
                 </li>
             </ul>
         </article>
