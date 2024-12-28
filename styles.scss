@@ -509,22 +509,160 @@ header {
   
 //end of shopping-cart page
 
-// start of product details
-.product-details-main {
-    background-color: var(--background_color);
-    color: var(--text_color_secodary);
-    min-height: 100vh;
+:root{
+    --text_color_main: #000000;
+    --text_color_secondary: #545454;
+    --background_color: #FAFAFF;
+    --color-secondary: #545454;
+    --margin-color:#d5d8f6;
+    --shadow-color: #d5d8f6;
 
-    h1, h2 {
-        color: var(--text_color_main);
+    @media (prefers-color-scheme: dark) {
+        --text_color_main: #FFFFFF;
+        --text_color_secondary: #cccccc;
+        --background_color: #36454F;
+        --color-secondary: #ABABAB;
+        --margin-color: #808080;
+        --shadow-color: #d5d8f6;
     }
+
+    --card-width: 15rem;
+    --card-height: 27rem;
+
+}
+
+$bp-mobile: 27rem;
+
+//shopping-cart page
+.shopping-card {
+    text-align: center;
+    padding: 1rem;
+    margin: 10px auto ;
+    width: 80%;
+    max-width: calc(100vw - 4rem);
+    border: 1px solid black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
 
     h2 {
         font-size: 30px;
-        padding: 20px;
     }
+
+    h3 {
+        font-size: 16px;
+        font-weight: bold;
+    }
+    
 }
 
+.cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding: 2rem;
+    color: var(--text_color_secondary)
+}
+
+.shopping-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 1rem;
+    width: 80%;
+    gap: 10px;
+    flex: 1;
+
+    img {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+    }
+    
+    p {
+        max-width: 100px;
+        text-align: center;
+    }
+
+    @media (max-width: 900px) {
+        flex-direction: column;
+    }
+
+}
+
+.delivery {
+    text-align: left;
+
+}
+
+
+.promocode {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    max-width: 50%;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+  input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #45a049;
+  }
+
+  p {
+    font-size: 10px;
+  }
+
+  @media (max-width: 400px) {
+    flex-wrap: wrap;
+
+  }
+}
+
+.pricing {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 1rem;
+    ul {
+        :last-child {
+            font-weight: bold;
+        }
+        :nth-child(2) {
+            color: red;
+        }
+    }
+
+    @media (max-width: 450px) {
+        flex-direction: column;
+    }
+}
+//end of shopping-cart page
+
+//start of product-details page
+ 
 .product-card {
     display: flex;
     flex-direction: row;
@@ -537,12 +675,18 @@ header {
     padding: 10px;
     max-width: 80%;
     height: 50%;
-    max-height: 100vh;
+    max-height: 400px;
     overflow: hidden;
 
     img {
         max-width: 50%;
+        height: auto;
         max-height: 100%;
+        object-fit: fill;
+    }
+    
+    h2 {
+        font-size: 30px;
     }
 }
 
@@ -553,6 +697,7 @@ header {
     justify-content: space-around;
     flex: 1;
     padding: 10px;
+    
 }
 
 .add-button{
@@ -584,14 +729,13 @@ input[type="number"] {
 
 @media (max-width: 590px) {
     .product-card {
-        flex-direction: column;
-        align-items: center; 
+        flex-direction: column; 
         width: 90%; 
-        height: auto; 
+        height: auto;
         max-height: none;
         
         img {
-            width: 100%;
+            max-width: 100%;
             height: auto;
         }
         
@@ -609,8 +753,7 @@ input[type="number"] {
         }
     }
 }
-
-//end of products details
+//end of product details page
 
 // *** END OF BLOCK ***
 
