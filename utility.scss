@@ -1,0 +1,108 @@
+// Utilities classes
+$bp-mobile: 27rem;
+
+.u-24-font{
+    font-size: 1.5rem;
+}
+
+.u-bg-color-margin{
+    background-color: var(--margin-color);
+}
+
+.u-bottom-margin-1rem{
+    margin-bottom: 1rem;
+}
+
+.u-border{
+    border: 1px solid var(--color-secondary);
+}
+
+.u-card-body{
+    width: 97vw;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;  
+}
+.u-cursor-pointer{
+    cursor: pointer;
+}
+
+.u-focus-text{
+    color: var(--text_color_main);
+    font-weight: 800;
+    font-size: 1.1rem;
+}
+
+.u-horisontal-menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: var(--min-menu-gap, 1rem);
+}
+
+.u-left-margin-1rem{
+    margin-left: 1rem;
+}
+
+.u-logofont{
+    font-family: 'Great Vibes', system-ui, cursive;
+    font-weight: 100;
+}
+
+.u-padding-4{
+    padding: 0.25rem;
+}
+
+.u-padding-8{
+    padding: 0.5rem;
+}
+
+.u-put-to-center{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.u-put-to-end{
+    align-self: flex-end;
+}
+
+.u-put-to-start{
+    align-self: flex-start;
+}
+
+.u-radius-16{
+    border-radius: 1rem;
+}
+
+.u-radius-32{
+    border-radius: 2rem;
+}
+
+.u-radius-4{
+    border-radius: 0.25rem;
+}
+
+.u-right-margin-1rem{
+    margin-right: 1rem;
+}
+
+.u-shadow{
+    box-shadow: 10px 10px 15px var(--shadow-color,grey);
+}
+
+.u-shadow-small{
+    box-shadow: 5px 5px 10px grey;
+}
+
+.u-stick-to-the-left{
+    margin-right: auto;
+}
+
+.u-stick-to-the-right{
+    margin-left: auto;
+}
+
+.u-top-margin{
+    margin-top: var(--stack-gutter, 3rem);
+}

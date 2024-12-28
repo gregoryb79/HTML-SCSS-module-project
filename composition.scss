@@ -1,0 +1,5 @@
+// Composition classes
+
+.stack > * + * {
+    margin-block-start: var(--stack-gutter, 3rem);
+}
