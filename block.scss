@@ -1,206 +1,6 @@
-// ******************************************
-// Everitying is in this file for now, 
-// separeted to RESET and CUBE by comments lines 
-// the CUBE sections are in correct cascade order
-
-:root{
-    --text_color_main: #000000;
-    --text_color_secondary: #545454;
-    --background_color: #FAFAFF;
-    --color-secondary: #545454;
-    --margin-color:#d5d8f6;
-    --shadow-color: #d5d8f6;
-
-    @media (prefers-color-scheme: dark) {
-        --text_color_main: #FFFFFF;
-        --text_color_secondary: #cccccc;
-        --background_color: #36454F;
-        --color-secondary: #ABABAB;
-        --margin-color: #808080;
-        --shadow-color: #d5d8f6;
-    }
-
-    --card-width: 15rem;
-    --card-height: 27rem;
-
-}
-
+// Block
 $bp-mobile: 27rem;
 
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
-
-
-
-//*** Default parameters *** == Reset
-*, *::before, *::after {
-    box-sizing: border-box;
-}
-
-* {
-    margin: 0;
-    border: 0;
-}
-
-ul, ol, menu {
-    padding: 0;
-    list-style: none;
-}
-
-html{
-    background-color: var(--margin-color);
-    font-size: var(--defauld-font-size,1rem);
-    font-family: system-ui;
-    color: var(--text_color_main);
-}
-
-body, main {
-    background-color: var(--background_color);    
-}
-
-h2{
-    text-align: center;
-    color: var(--text_color_main);
-    font-size: var(--h2-font-size, 4rem);
-}
-
-h3{
-    text-align: center;
-    color: var(--text_color_main);
-    font-size: var(--h3-font-size, 2rem);
-}
-
-p{
-    color: var(--text_color_secondary);
-}
-
-a{
-    color: var(--text_color_main);
-    text-decoration: none;
-    cursor: pointer;
-    &:hover{
-        color: var(--text_color_secondary);        
-    }   
-}
-//*** END of RESET ********
-
-//*************************
-
-// Composition
-.stack > * + * {
-    margin-block-start: var(--stack-gutter, 3rem);
-}
-// *** END of COMPISITION ***
-
-// Utilities
-.u-24-font{
-    font-size: 1.5rem;
-}
-
-.u-bg-color-margin{
-    background-color: var(--margin-color);
-}
-
-.u-bottom-margin-1rem{
-    margin-bottom: 1rem;
-}
-
-.u-border{
-    border: 1px solid var(--color-secondary);
-}
-
-.u-card-body{
-    width: 97vw;
-    margin: auto;
-    margin-top: 1rem;
-    margin-bottom: 1rem;  
-}
-.u-cursor-pointer{
-    cursor: pointer;
-}
-
-.u-focus-text{
-    color: var(--text_color_main);
-    font-weight: 800;
-    font-size: 1.1rem;
-}
-
-.u-horisontal-menu{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: var(--min-menu-gap, 1rem);
-}
-
-.u-left-margin-1rem{
-    margin-left: 1rem;
-}
-
-.u-logofont{
-    font-family: 'Great Vibes', system-ui, cursive;
-    font-weight: 100;
-}
-
-.u-padding-4{
-    padding: 0.25rem;
-}
-
-.u-padding-8{
-    padding: 0.5rem;
-}
-
-.u-put-to-center{
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.u-put-to-end{
-    align-self: flex-end;
-}
-
-.u-put-to-start{
-    align-self: flex-start;
-}
-
-.u-radius-16{
-    border-radius: 1rem;
-}
-
-.u-radius-32{
-    border-radius: 2rem;
-}
-
-.u-radius-4{
-    border-radius: 0.25rem;
-}
-
-.u-right-margin-1rem{
-    margin-right: 1rem;
-}
-
-.u-shadow{
-    box-shadow: 10px 10px 15px var(--shadow-color,grey);
-}
-
-.u-shadow-small{
-    box-shadow: 5px 5px 10px grey;
-}
-
-.u-stick-to-the-left{
-    margin-right: auto;
-}
-
-.u-stick-to-the-right{
-    margin-left: auto;
-}
-
-.u-top-margin{
-    margin-top: var(--stack-gutter, 3rem);
-}
-
-// *** END OF UTILITIES ***
-
-// Block
 .about-us {
     width: min(60rem, 80vw);
     margin: auto;
@@ -230,7 +30,6 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    // gap: 0.5rem;
     overflow: hidden;
     text-align: center;
     
@@ -324,6 +123,105 @@ footer {
  
 }
 
+
+.hot-products-menu{
+       
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: var(--min-cards-gap, 2rem);
+    margin: var(--min-cards-gap, 2rem);
+}
+
+.hp-card{
+
+    img{
+        border-radius: inherit;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        width: 15rem;
+        height: 17rem;
+    }
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: var(--card-width);
+    height: var(--card-height);
+    border-radius: 2rem;
+    // transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* מונע תוכן שגולש */
+    box-sizing: border-box; /* מבטיח שגבולות וחללים פנימיים לא ייצרו בעיות */
+  
+    h4{
+        padding-top: 0.7rem;
+    }
+  
+    h4, p{
+        padding-bottom: 0.2rem;
+    }
+    
+    button{
+        margin-bottom: 0.7rem;
+        border-radius: 15rem;
+        padding: 0.7rem;
+        animation: none;
+        background: #d6d8f3;
+  
+        position: relative; /* חובה בשביל `::before` */
+        overflow: hidden;
+        
+        &:hover{
+            transform: none; // כדי לבטל את ההובר 
+            animation: hover-btn 2s forwards;
+        }
+        @keyframes hover-btn {
+            0%{
+                scale: 1;
+            }
+            50%{
+                scale: 1.3;
+            }
+            100%{
+                scale: 1;
+            }
+        }
+  
+        &::before{
+            content: "";
+            position: absolute;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(212,215,244,0.5) 0%, rgba(143,146,180,1) 100%); 
+            z-index: -1;
+            transition: all 1.5s ease-in-out;
+        }
+  
+        &:hover::before{
+            top: 0; // כדי שהצבע בהובר יחזור למקום אחרי שמורידים עכבר ממנו
+        }
+        
+    }
+  
+    &:hover{
+        animation: hover-col11 1s ease-out forwards;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+    }
+    @keyframes hover-col11 {
+        0%{
+            scale: 1;
+        }
+        100%{
+            scale: 1.05;
+        }
+    }
+  }
+
 header {
     display: flex;
     flex-wrap: wrap;
@@ -368,8 +266,7 @@ header {
 
 .site-nav-menu {
     @media screen and (max-width: $bp-mobile) {
-        display: none;
-        // background-color: red;
+        display: none;        
     }
 }
 
@@ -380,7 +277,7 @@ header {
     gap: var(--min-cards-gap, 2rem);
 }
 
-//start of shopping cart
+
 .shopping-card {
     text-align: center;
     padding: 1rem;
@@ -401,9 +298,9 @@ header {
         font-weight: bold;
     }
     
-  }
+}
   
-  .cart {
+.cart {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -411,9 +308,9 @@ header {
     margin: 0 auto;
     padding: 2rem;
     color: var(--text_color_secondary)
-  }
+}
   
-  .shopping-item {
+.shopping-item {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -440,15 +337,15 @@ header {
         flex-direction: column;
     }
   
-  }
+}
   
-  .delivery {
+.delivery {
     text-align: left;
   
-  }
+}
   
   
-  .promocode {
+.promocode {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -457,38 +354,38 @@ header {
     max-width: 50%;
     margin: 0 auto;
     box-sizing: border-box;
+
+    input[type="text"] {
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    button {
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+
+    p {
+        font-size: 10px;
+    }
+    
+    @media (max-width: 400px) {
+        flex-wrap: wrap;
+    
+    }
+}
   
-  input[type="text"] {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  button {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #45a049;
-  }
-  
-  p {
-    font-size: 10px;
-  }
-  
-  @media (max-width: 400px) {
-    flex-wrap: wrap;
-  
-  }
-  }
-  
-  .pricing {
+.pricing {
     display: flex;
     flex-direction: row;
     gap: 10px;
@@ -505,35 +402,8 @@ header {
     @media (max-width: 450px) {
         flex-direction: column;
     }
-  }
-  
-//end of shopping-cart page
-
-:root{
-    --text_color_main: #000000;
-    --text_color_secondary: #545454;
-    --background_color: #FAFAFF;
-    --color-secondary: #545454;
-    --margin-color:#d5d8f6;
-    --shadow-color: #d5d8f6;
-
-    @media (prefers-color-scheme: dark) {
-        --text_color_main: #FFFFFF;
-        --text_color_secondary: #cccccc;
-        --background_color: #36454F;
-        --color-secondary: #ABABAB;
-        --margin-color: #808080;
-        --shadow-color: #d5d8f6;
-    }
-
-    --card-width: 15rem;
-    --card-height: 27rem;
-
 }
-
-$bp-mobile: 27rem;
-
-//shopping-cart page
+  
 .shopping-card {
     text-align: center;
     padding: 1rem;
@@ -595,12 +465,6 @@ $bp-mobile: 27rem;
 
 }
 
-.delivery {
-    text-align: left;
-
-}
-
-
 .promocode {
     display: flex;
     flex-direction: row;
@@ -659,9 +523,6 @@ $bp-mobile: 27rem;
         flex-direction: column;
     }
 }
-//end of shopping-cart page
-
-//start of product-details page
  
 .product-card {
     display: flex;
@@ -712,7 +573,7 @@ $bp-mobile: 27rem;
     &:hover {
         background-color: var(--color-secondary);
     }
-  }
+}
 
 input[type="number"] {
     width: 60px;
@@ -751,114 +612,3 @@ input[type="number"] {
         }
     }
 }
-//end of product details page
-
-// *** END OF BLOCK ***
-
-// Exceptions
-
-// *** END OF EXCEPTIONS ***
-
-.hot-products-menu{
-       
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: var(--min-cards-gap, 2rem);
-    margin: var(--min-cards-gap, 2rem);
-}
-
-.hp-card{
-
-    img{
-        border-radius: inherit;
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-        width: 15rem;
-        height: 17rem;
-    }
-  
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    width: var(--card-width);
-    height: var(--card-height);
-    border-radius: 2rem;
-    // transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden; /* מונע תוכן שגולש */
-    box-sizing: border-box; /* מבטיח שגבולות וחללים פנימיים לא ייצרו בעיות */
-  
-    h4{
-        padding-top: 0.7rem;
-    }
-  
-    h4, p{
-        padding-bottom: 0.2rem;
-    }
-    
-    button{
-        margin-bottom: 0.7rem;
-        border-radius: 15rem;
-        padding: 0.7rem;
-        animation: none;
-        background: #d6d8f3;
-  
-        position: relative; /* חובה בשביל `::before` */
-        overflow: hidden;
-        
-        &:hover{
-            transform: none; // כדי לבטל את ההובר משורה 200
-            animation: hover-btn 2s forwards;
-        }
-        @keyframes hover-btn {
-            0%{
-                scale: 1;
-            }
-            50%{
-                scale: 1.3;
-            }
-            100%{
-                scale: 1;
-            }
-        }
-  
-        &::before{
-            content: "";
-            position: absolute;
-            top: -100%;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle, rgba(212,215,244,0.5) 0%, rgba(143,146,180,1) 100%); 
-            z-index: -1;
-            transition: all 1.5s ease-in-out;
-        }
-  
-        &:hover::before{
-            top: 0; // כדי שהצבע בהובר יחזור למקום אחרי שמורידים עכבר ממנו
-        }
-        
-    }
-  
-    &:hover{
-        animation: hover-col11 1s ease-out forwards;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
-    }
-    @keyframes hover-col11 {
-        0%{
-            scale: 1;
-        }
-        100%{
-            scale: 1.05;
-        }
-    }
-  }
-  
-  
-  
-  
-  
-  
