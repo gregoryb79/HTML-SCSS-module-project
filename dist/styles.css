@@ -684,55 +684,43 @@ input[type=number] {
     font-size: 12px;
   }
 }
-#productsPage {
-  margin: auto;
+.hot-products-menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: var(--min-cards-gap, 2rem);
+  margin: var(--min-cards-gap, 2rem);
 }
-#productsPage header {
-  display: block;
-}
-#productsPage img {
-  border-radius: inherit;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  width: 15rem;
-  height: 17rem;
-}
-#productsPage .productsHeader h3 {
-  text-align: center;
-  text-decoration: underline;
-}
-#productsPage .gridCont {
-  max-width: min(90%, 1200px);
-  margin: auto;
-}
-#productsPage .gridCont .grid12 {
-  display: grid;
-  grid-template: repeat(3, 1fr)/repeat(4, 1fr);
-  gap: 6rem 3.5rem;
-  padding: 3rem;
-  text-align: center;
-}
-#productsPage .gridCont .col11 {
+
+.hp-card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  min-width: 15rem;
-  min-height: 17rem;
+  width: var(--card-width);
+  height: var(--card-height);
   border-radius: 2rem;
   overflow: hidden;
   /* מונע תוכן שגולש */
   box-sizing: border-box;
   /* מבטיח שגבולות וחללים פנימיים לא ייצרו בעיות */
 }
-#productsPage .gridCont .col11 h4 {
+.hp-card img {
+  border-radius: inherit;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  width: 15rem;
+  height: 17rem;
+}
+.hp-card h4 {
   padding-top: 0.7rem;
 }
-#productsPage .gridCont .col11 h4, #productsPage .gridCont .col11 p {
+.hp-card h4, .hp-card p {
   padding-bottom: 0.2rem;
 }
-#productsPage .gridCont .col11 button {
+.hp-card button {
   margin-bottom: 0.7rem;
   border-radius: 15rem;
   padding: 0.7rem;
@@ -742,7 +730,7 @@ input[type=number] {
   /* חובה בשביל `::before` */
   overflow: hidden;
 }
-#productsPage .gridCont .col11 button:hover {
+.hp-card button:hover {
   transform: none;
   animation: hover-btn 2s forwards;
 }
@@ -757,7 +745,7 @@ input[type=number] {
     scale: 1;
   }
 }
-#productsPage .gridCont .col11 button::before {
+.hp-card button::before {
   content: "";
   position: absolute;
   top: -100%;
@@ -768,10 +756,10 @@ input[type=number] {
   z-index: -1;
   transition: all 1.5s ease-in-out;
 }
-#productsPage .gridCont .col11 button:hover::before {
+.hp-card button:hover::before {
   top: 0;
 }
-#productsPage .gridCont .col11:hover {
+.hp-card:hover {
   animation: hover-col11 1s ease-out forwards;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }

@@ -759,14 +759,18 @@ input[type="number"] {
 
 // *** END OF EXCEPTIONS ***
 
-#productsPage{
-    margin: auto;
-    
+.hot-products-menu{
+       
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: var(--min-cards-gap, 2rem);
+    margin: var(--min-cards-gap, 2rem);
+}
 
-    header{
-        display: block;
-    }
-    
+.hp-card{
+
     img{
         border-radius: inherit;
         border-bottom-left-radius: 0;
@@ -774,104 +778,87 @@ input[type="number"] {
         width: 15rem;
         height: 17rem;
     }
-
-    
-    .productsHeader{
-        h3{
-            text-align: center;
-            text-decoration: underline;
-        }
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: var(--card-width);
+    height: var(--card-height);
+    border-radius: 2rem;
+    // transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* מונע תוכן שגולש */
+    box-sizing: border-box; /* מבטיח שגבולות וחללים פנימיים לא ייצרו בעיות */
+  
+    h4{
+        padding-top: 0.7rem;
+    }
+  
+    h4, p{
+        padding-bottom: 0.2rem;
     }
     
-    .gridCont{
-        max-width: min(90%, 1200px);
-        margin: auto;
+    button{
+        margin-bottom: 0.7rem;
+        border-radius: 15rem;
+        padding: 0.7rem;
+        animation: none;
+        background: #d6d8f3;
+  
+        position: relative; /* חובה בשביל `::before` */
+        overflow: hidden;
         
-        .grid12{
-            display: grid;
-            grid-template: repeat(3, 1fr) / repeat(4, 1fr);
-            gap: 6rem 3.5rem;
-            padding: 3rem;
-            text-align: center;
+        &:hover{
+            transform: none; // כדי לבטל את ההובר משורה 200
+            animation: hover-btn 2s forwards;
+        }
+        @keyframes hover-btn {
+            0%{
+                scale: 1;
+            }
+            50%{
+                scale: 1.3;
+            }
+            100%{
+                scale: 1;
+            }
+        }
+  
+        &::before{
+            content: "";
+            position: absolute;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(212,215,244,0.5) 0%, rgba(143,146,180,1) 100%); 
+            z-index: -1;
+            transition: all 1.5s ease-in-out;
+        }
+  
+        &:hover::before{
+            top: 0; // כדי שהצבע בהובר יחזור למקום אחרי שמורידים עכבר ממנו
         }
         
-        .col11{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            text-align: center;
-            min-width: 15rem;
-            min-height: 17rem;
-            border-radius: 2rem;
-            // transition: transform 0.3s ease, box-shadow 0.3s ease;
-            overflow: hidden; /* מונע תוכן שגולש */
-            box-sizing: border-box; /* מבטיח שגבולות וחללים פנימיים לא ייצרו בעיות */
-
-            h4{
-                padding-top: 0.7rem;
-            }
-
-            h4, p{
-                padding-bottom: 0.2rem;
-            }
-            
-            button{
-                margin-bottom: 0.7rem;
-                border-radius: 15rem;
-                padding: 0.7rem;
-                animation: none;
-                background: #d6d8f3;
-
-                position: relative; /* חובה בשביל `::before` */
-                overflow: hidden;
-                
-                &:hover{
-                    transform: none; // כדי לבטל את ההובר משורה 200
-                    animation: hover-btn 2s forwards;
-                }
-                @keyframes hover-btn {
-                    0%{
-                        scale: 1;
-                    }
-                    50%{
-                        scale: 1.3;
-                    }
-                    100%{
-                        scale: 1;
-                    }
-                }
-
-                &::before{
-                    content: "";
-                    position: absolute;
-                    top: -100%;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background: radial-gradient(circle, rgba(212,215,244,0.5) 0%, rgba(143,146,180,1) 100%); 
-                    z-index: -1;
-                    transition: all 1.5s ease-in-out;
-                }
-
-                &:hover::before{
-                    top: 0; // כדי שהצבע בהובר יחזור למקום אחרי שמורידים עכבר ממנו
-                }
-                
-            }
-
-            &:hover{
-                animation: hover-col11 1s ease-out forwards;
-                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
-            }
-            @keyframes hover-col11 {
-                0%{
-                    scale: 1;
-                }
-                100%{
-                    scale: 1.05;
-                }
-            }
+    }
+  
+    &:hover{
+        animation: hover-col11 1s ease-out forwards;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+    }
+    @keyframes hover-col11 {
+        0%{
+            scale: 1;
+        }
+        100%{
+            scale: 1.05;
         }
     }
-}
+  }
+  
+  
+  
+  
+  
+  
