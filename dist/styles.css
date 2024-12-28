@@ -433,6 +433,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   padding: 10px;
   margin: 5px auto;
   border: 1px solid #ccc;
@@ -441,6 +442,12 @@ header {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
   min-width: 100%;
+}
+@media screen and (max-width: 27rem) {
+  .shopping-item {
+    max-width: 15.5rem;
+    min-width: 70%;
+  }
 }
 .shopping-item img {
   width: 50px;
